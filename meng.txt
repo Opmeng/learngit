@@ -4,4 +4,4 @@
 =======
 	Word!
 >>>>>>> fea
-	merge!++iii+
+	merge!+++0000
