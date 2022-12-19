@@ -144,7 +144,7 @@ $ git remote -v 更详细的信息
 
 ~指定向上移动多少次
 
-![image-20221216134328622](E:\面试官\MD\img\image-20221216134328622.png)->![image-20221216134424509](E:\面试官\MD\img\image-20221216134424509.png)
+![image-20221216134328622](Git.assets/image-20221216134328622.png)->![image-20221216134424509](Git.assets/image-20221216134424509.png)
 
 ```
 $ git checkout HEAD^ 
@@ -173,7 +173,7 @@ Git允许我们在版本的历史之间穿梭，使用命令git reset --hard com
 
 - git cherry-pick <提交号> 将一些提交复制到当前所在的位置（`HEAD`）下面
 
-<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216140359325.png" alt="image-20221216140359325" style="zoom:50%;" /><img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216140440925.png" alt="image-20221216140440925" style="zoom:50%;" />
+<img src="Git.assets/image-20221216140359325-16714408431061.png" alt="image-20221216140359325" style="zoom:50%;" /><img src="Git.assets/image-20221216140440925.png" alt="image-20221216140440925" style="zoom:50%;" />
 
 ```
 git cherry-pick c3 c4 c7
@@ -198,9 +198,9 @@ git rebase -i HEAD~
 - 接着再用 `git rebase -i` 来将他们调回原来的顺序
 - 最后我们把 main 移到修改的最前端（用你自己喜欢的方法），就大功告成啦！
 
-<img src="E:\面试官\MD\img\image-20221216142751047.png" style="zoom:50%;" />
+<img src="Git.assets/image-20221216142751047.png" style="zoom:50%;" />
 
-<img src="E:\面试官\MD\img\image-20221216142805257.png" style="zoom:50%;" />
+<img src="Git.assets/image-20221216142805257.png" style="zoom:50%;" />
 
 ```
 $ git rebase -i HEAD~2
@@ -213,9 +213,9 @@ $ git branch -f main c3''
 
 cherry-pick 可以将提交树上任何地方的提交记录取过来追加到 HEAD 上（只要不是 HEAD 上游的提交就没问题）。
 
-![image-20221216144434980](E:\面试官\MD\img\image-20221216144434980.png)
+![image-20221216144434980](Git.assets/image-20221216144434980.png)
 
-![image-20221216144503971](E:\面试官\MD\img\image-20221216144503971.png)
+![image-20221216144503971](Git.assets/image-20221216144503971.png)
 
 ```
 git checkout main 切换到main分支
@@ -228,15 +228,15 @@ git cherry-pick c3 将c3复制到当前所在的位置（`HEAD`）下面
 
 永久地将某个特定的提交命名为里程碑，然后就可以像分支一样引用了.
 
-![image-20221216144706216](E:\面试官\MD\img\image-20221216144706216.png)
+![image-20221216144706216](Git.assets/image-20221216144706216.png)
 
 ```
 git tag v1 c1 命名v1标签，并且明确地让它指向提交记录 C1
 ```
 
-![image-20221216145315883](E:\面试官\MD\img\image-20221216145315883.png)
+![image-20221216145315883](Git.assets/image-20221216145315883.png)
 
-![image-20221216145329448](E:\面试官\MD\img\image-20221216145329448.png)
+![image-20221216145329448](Git.assets/image-20221216145329448.png)
 
 ```
 git tag v0 c1 在c1提交点建v0标签
@@ -266,9 +266,9 @@ git describe <ref>
 
 #### 多次Rebase
 
-![image-20221216151308542](E:\面试官\MD\img\image-20221216151308542.png)
+![image-20221216151308542](Git.assets/image-20221216151308542.png)
 
-![image-20221216151045193](E:\面试官\MD\img\image-20221216151045193.png)
+![image-20221216151045193](Git.assets/image-20221216151045193.png)
 
 ```
 git rebase main bugFix 
@@ -287,9 +287,9 @@ Git 默认选择合并提交的“第一个”父提交，在操作符 `^` 后�
 
 git checkout HEAD~^2~2
 
-<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216152007023.png" alt="image-20221216152007023" style="zoom:50%;" />
+<img src="Git.assets/image-20221216152007023.png" alt="image-20221216152007023" style="zoom:50%;" />
 
-<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216152051743.png" alt="image-20221216152051743" style="zoom:50%;" >
+<img src="Git.assets/image-20221216152051743.png" alt="image-20221216152051743" style="zoom:50%;" >
 
 ```
 $ git checkout HEAD~^2~
@@ -297,13 +297,13 @@ $ git branch$ git branch bugWork 在c2上创建bugWor分支
 $ git checkout main 切换到main
 ```
 
-<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216152541803.png" alt="image-20221216152541803" style="zoom:50%;" />
+<img src="Git.assets/image-20221216152541803.png" alt="image-20221216152541803" style="zoom:50%;" />
 
-![image-20221216152242340](C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216152242340.png)
+![image-20221216152242340](Git.assets/image-20221216152242340.png)
 
 #### 纠缠不清的分支
 
-<img src="E:\面试官\MD\img\image-20221216153720634.png" alt="image-20221216153720634" style="zoom:50%;" />-------<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216153744189.png" alt="image-20221216153744189" style="zoom:50%;" />
+<img src="Git.assets/image-20221216153720634.png" alt="image-20221216153720634" style="zoom:50%;" />-------<img src="Git.assets/image-20221216153744189.png" alt="image-20221216153744189" style="zoom:50%;" />
 
 ```
 $ git checkout one
@@ -354,7 +354,7 @@ git fetch 做了些什么
 
 #### 模拟团队合作
 
-<img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216160029394.png" alt="image-20221216160029394" style="zoom:50%;" /><img src="C:\Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20221216160046474.png" alt="image-20221216160046474" style="zoom:67%;" />
+<img src="Git.assets/image-20221216160029394.png" alt="image-20221216160029394" style="zoom:50%;" /><img src="Git.assets/image-20221216160046474.png" alt="image-20221216160046474" style="zoom:67%;" />
 
 ```
 $ git clone 克隆远程仓库
@@ -394,9 +394,9 @@ $ git push
 
 #### *锁定的Main(Locked Main)*
 
-![image-20221216163718333](E:\面试官\MD\img\image-20221216163718333.png)
+![image-20221216163718333](Git.assets/image-20221216163718333.png)
 
-![image-20221216163733898](E:\面试官\MD\img\image-20221216163733898.png)
+![image-20221216163733898](Git.assets/image-20221216163733898.png)
 
 ```
 $ git reset --hard o/main  版本回退
@@ -408,9 +408,9 @@ $ git push origin feature 推送到远程仓库
 
 #### 推送主分支
 
-![image-20221216165543731](E:\面试官\MD\img\image-20221216165543731.png)
+![image-20221216165543731](Git.assets/image-20221216165543731.png)
 
-![image-20221216165603592](E:\面试官\MD\img\image-20221216165603592.png)
+![image-20221216165603592](Git.assets/image-20221216165603592.png)
 
 ```
 $ git fetch 先获取数据
@@ -428,9 +428,9 @@ $ git push 推送远程仓库
 
 #### 合并远程仓库
 
-![image-20221216170748757](E:\面试官\MD\img\image-20221216170748757.png)
+![image-20221216170748757](Git.assets/image-20221216170748757.png)
 
-![image-20221216170810391](E:\面试官\MD\img\image-20221216170810391.png)
+![image-20221216170810391](Git.assets/image-20221216170810391.png)
 
 ```
 $ git checkout main
@@ -467,9 +467,9 @@ $ git push
 
 
 
-![image-20221216172154120](E:\面试官\MD\img\image-20221216172154120.png)
+![image-20221216172154120](Git.assets/image-20221216172154120.png)
 
-![image-20221216172213361](E:\面试官\MD\img\image-20221216172213361.png)
+![image-20221216172213361](Git.assets/image-20221216172213361.png)
 
 ```
 git checkout -b side o/main
