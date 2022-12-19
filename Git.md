@@ -144,7 +144,7 @@ $ git remote -v 更详细的信息
 
 ~指定向上移动多少次
 
-![image-20221216134328622](E:\面试官\MD\img\image-20221216134328622.png)->![image-20221216134424509](E:\面试官\MD\img\image-20221216134424509.png)
+![image-20221216134328622](Git.assets\image-20221216134328622.png)->![image-20221216134424509](Git.assets\image-20221216134424509.png)
 
 ```
 $ git checkout HEAD^ 
