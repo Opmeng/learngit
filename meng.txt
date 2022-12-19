@@ -1,2 +1,6 @@
 	Creating a new branch quick.
+<<<<<<< HEAD
 	Word!
+=======
+	Word!
+>>>>>>> fea
