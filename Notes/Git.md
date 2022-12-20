@@ -530,12 +530,11 @@ git push <remote> <place>
 在合并bug修复内容之前，dev分支之前的修改应继续stash，而不要恢复。
  
  git tag v1 c1(标签不会自动推到远程)
- 	git tag -d v1 本地删除
+ 	git tag -d v1 本地删除 
+ 	git Describe 描述最近的锚点
  	
  	git push origin <tagname> 推到远程
  	git push origin :refs/tags/<>tagname
- 	
- git Describe
  
  
  Rebase
