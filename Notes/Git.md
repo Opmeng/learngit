@@ -509,9 +509,8 @@ git push <remote> <place>
  git reflog
  git log --graph 分支合并图
  
- git rm 文件名
- 	git commit -m ""
- 	git checkout -- 文件名
+ git rm 文件名  删除文件
+ git checkout -- 文件名
  
  git branch 
  	git branch -d -D 大D强制删除
