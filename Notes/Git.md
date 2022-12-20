@@ -501,8 +501,10 @@ git push <remote> <place>
  git commit
  	git commit -m 
  	git commit --amend
- git status
-     git diff
+ 	
+ git status 查看状态
+     git diff查看具体修改内容
+     
  git log 
  git reflog
  git log --graph 分支合并图
