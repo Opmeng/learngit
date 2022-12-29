@@ -60,6 +60,12 @@ $git status 查看当前仓库情况
 
 $ git mv 原文件名 新文件名
 
+```
+git mv hello.txt he.txt
+```
+
+
+
 #### 文件删除
 
 git rm 用于删除文件，已经提交到版本库的不用担心误删。
